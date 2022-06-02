@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+:root {
+  --ff-1 : 'Epilogue', sans-serif;
+
+  --clr-pri : hsl(0, 0%, 98%);
+  --clr-sec: hsl(0, 0%, 41%);
+  --clr-tri: hsl(0, 0%, 8%)
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+
+  font-size: 16px;
+  font-family: var(--ff-1);
+}
+
+header {
+  display: flex;
+
+  width: 100%;
+  padding: 1em 2em;
+
+}
+
+header h1 {
+  font-size: 1.5em;
+
+  text-transform: lowercase;
+  font-weight: 700;
+}
+
+header nav {
+  margin-left: 2em;
+  margin-right: auto;
+
+  display: flex;
+}
+
+header nav ul {
+  list-style: none;
+
+  display: flex;
+  gap: 1em;
+
+  margin: auto;
+
+  font-size: 0.8em;
+  color: var(--clr-sec);
+}
+
+header nav ul li, button {
+  cursor: pointer;
+}
+header nav ul li:hover {
+  color: var(--clr-tri);
+}
+
+header .buttons_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+
+  margin-left: auto;
+}
+header .buttons_wrapper button {
+  background: white;
+  border: 0;
+}
+
+header .buttons_wrapper button.register {
+  border: 1px solid black;
+  padding: 0.4em 0.8em;
+
+  border-radius: 10px;
+}
+
+header .buttons_wrapper button.register:hover {
+  background: var(--clr-tri);
+  color: var(--clr-pri);
+  transition: .5s;
+}
+
+header .ham_wrapper {
+  margin-left: auto;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 0.5em 1em;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  header .buttons_wrapper {
+    display: none;
+  }
+
+  header .ham_wrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+}
